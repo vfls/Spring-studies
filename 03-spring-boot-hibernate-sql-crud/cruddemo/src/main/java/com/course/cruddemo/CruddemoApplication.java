@@ -19,13 +19,13 @@ public class CruddemoApplication {
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
             //createStudent(studentDAO);
-            //createMultipleStudents(studentDAO);
-            //redStudent(studentDAO);
+            createMultipleStudents(studentDAO);
+            //readStudent(studentDAO);
             //queryForStudents(studentDAO);
             //queryForStudentsByLastName(studentDAO);
             //updateStudent(studentDAO);
             //deleteStudent(studentDAO);
-            deleteAllStudents(studentDAO);
+            //deleteAllStudents(studentDAO);
         };
     }
 
@@ -80,7 +80,7 @@ public class CruddemoApplication {
         }
     }
 
-    private void redStudent(StudentDAO studentDAO) {
+    private void readStudent(StudentDAO studentDAO) {
 
         //create a student object
         System.out.println("Creating a new student object ....");
@@ -98,7 +98,7 @@ public class CruddemoApplication {
         System.out.println("Student found: " + myStudent);
     }
 
-    private void cretaeMultipleStudents(StudentDAO studentDAO) {
+    private void createMultipleStudents(StudentDAO studentDAO) {
 
         //create multiple students
         System.out.println("Creating 3 student object...");
